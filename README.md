@@ -7,9 +7,11 @@ shared-memory parallelism within a node) and MPI (for distributed-memory paralle
 across nodes).
 
 ○ Serial Methodology:
+
 ■ Understand the structure and computational components of the complex application.
 
 ○ Parallel (HPC) Methodology:
+
 ■ Identify sections of the application suitable for shared-memory parallelization (within
 nodes) and distributed-memory parallelization (across nodes).
 
