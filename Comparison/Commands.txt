@@ -1,0 +1,12 @@
+export OMP_NUM_THREADS=8
+g++ -fopenmp pureOpenMP.cpp -o openmp_executable
+mpicxx -fopenmp -o mpi_solver pureMPI.cpp
+./openmp_simulation
+./mpi_solver
+./openmp_simulation
+mpirun -np 8 ./mpi_solver
+export OMP_NUM_THREADS=4
+mpicxx -fopenmp -o hybrid_solver hybrid_solver.cpp
+mpicxx -fopenmp -o hybrid_solver openmp+mpicomparison.cpp
+export OMP_NUM_THREADS=4
+mpirun -np 2 ./hybrid_solver
