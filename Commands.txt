@@ -1,0 +1,21 @@
+Commands for the necessary libraries to be installed and also the commands to run the script:
+This is specifically for hybrid
+
+sudo apt update 
+sudo apt install g++ -y
+sudo apt install openmpi-bin openmpi-common libopenmpi-dev -y
+mpic++ -fopenmp -I/usr/lib/x86_64-linux-gnu/openmpi/include -L/usr/lib/x86_64-linux-gnu/openmpi/lib -o code1 code1.cpp -lmpi
+
+mpirun -np 4 ./code1
+
+pip install pandas matplotlib
+
+sudo apt install python3-tk -y
+
+python plot_velocity.py
+
+pip install pandas matplotlib imageio
+
+python generate_velocity_gif.py
+
+xdg-open velocity_simulation.gif
